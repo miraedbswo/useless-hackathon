@@ -6,3 +6,6 @@ api = Api(survey_blueprint)
 
 from app.view.survey import Survey
 api.add_resource(Survey, '/survey')
+
+from app.view.link import Link
+api.add_resource(Link, '/link/<phone_num>')

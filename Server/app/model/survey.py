@@ -1,3 +1,5 @@
+from flask import abort
+
 from app.extension import db
 from app.model.user import UserModel
 
@@ -19,3 +21,10 @@ class SurveyModel(db.Document):
     user = db.ReferenceField(
         document_type=UserModel
     )
+
+    @classmethod
+    def get_survey_by_phone_num(cls, phone_number: str):
+        survey = SurveyModel.objects(user=UserModel.objects(phone_number=phone_number).first()).first()
+        if not survey:
+            abort(403)
+        return survey
