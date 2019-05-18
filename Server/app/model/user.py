@@ -18,3 +18,4 @@ class UserModel(db.Document):
     gender = db.IntField(
         max_value=1
     )
+

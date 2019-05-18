@@ -1,4 +1,5 @@
 from app.extension import db
+from app.model.user import UserModel
 
 
 class SurveyModel(db.Document):
@@ -13,4 +14,8 @@ class SurveyModel(db.Document):
 
     favorite_food = db.IntField(
         max_value=5
+    )
+
+    user = db.ReferenceField(
+        document_type=UserModel
     )

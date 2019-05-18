@@ -25,4 +25,4 @@ def json_type_validate(json_schema: dict):
     return decorator
 
 
-SURVEY_POST_JSON = dict(name=str, birthDate=str, gender=int, disturbanceFactor=int, favoriteFood=int)
+SURVEY_POST_JSON = dict(name=str, birthDate=str, gender=int, phoneNumber=str, disturbanceFactor=int, favoriteFood=int)
