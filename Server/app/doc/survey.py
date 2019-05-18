@@ -8,6 +8,7 @@ SURVEY_POST = {
         make_parameter('name', '사용자 이름'),
         make_parameter('birthDate', '사용자 생년월일'),
         make_parameter('gender', '사용자 성별'),
+        make_parameter('phoneNumber', '사용자 핸드폰 번호'),
         make_parameter('disturbanceFactor', '다이어트에 방해가 되는 요소 (0~4)', param_type='int'),
         make_parameter('favoriteFood', '가장 좋아하는 음식 (0~5)', param_type='int'),
     ],
