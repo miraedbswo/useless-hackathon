@@ -7,4 +7,10 @@ class SurveyModel(db.Document):
     int 기반으로 하여 그 기준에 맞는 url을 전송하기 위함.
     ex) 11시에 야식이 땡긴다 -> 그 case에 맞게 보내줌
     """
-    pass
+    disturbance_factor = db.IntField(
+        max_value=4
+    )
+
+    favorite_food = db.IntField(
+        max_value=5
+    )
