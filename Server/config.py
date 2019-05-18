@@ -23,8 +23,10 @@ class Config:
         'specs_route': '/docs',
 
         'info': {
-            'title': SERVICE_NAME + ' API',
-            'version': '1.0'
+            'title': 'Spoqa Hackathon',
+            'version': '1.0',
+            "description": 'This is an Api server for spoqa ㅁㅆㅁㅌ entry. \
+                            You can find out more about it at https://github.com/miraedbswo/useless-hackathon.'
         },
 
         'host': 'localhost',
@@ -34,12 +36,6 @@ class Config:
     SWAGGER_TEMPLATE = {
         'schemes': [
             'http'
-        ],
-        'tags': [
-            {
-                'name': 'Survey',
-                'description': '설문조사 관련 API'
-            }
         ]
     }
 

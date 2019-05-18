@@ -5,4 +5,4 @@ survey_blueprint = Blueprint('survey', __name__)
 api = Api(survey_blueprint)
 
 from app.view.survey import Survey
-api.add_resource(Survey)
+api.add_resource(Survey, '/survey')
