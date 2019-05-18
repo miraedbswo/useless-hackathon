@@ -12,8 +12,9 @@ from app.model.link import LinkModel
 
 
 def generator():
+    list_ = [0, 2, 3]
     while True:
-        for i in range(0, 5):
+        for i in list_:
             try:
                 yield i
             except StopIteration:
