@@ -1,8 +1,8 @@
-def make_parameter(name: str, discription: str, param_type='str', required=True):
+def make_parameter(name: str, discription: str, _in='json', param_type='str', required=True):
     return {
         'name': name,
         'description': discription,
-        'in': 'json',
+        '_in': _in,
         'type': param_type,
         'required': required
     }

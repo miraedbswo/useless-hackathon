@@ -3,20 +3,22 @@ from app.doc import make_parameter
 
 LINK_GET = {
     'tags': ['Link'],
-    'description': '잠금화면에 띄워 줄 url',
+    'description': '잠금화면에 띄워줄 영상 or 이미지 url 제공',
     'parameters': [
-        make_parameter('name', '사용자 이름'),
-        make_parameter('birthDate', '사용자 생년월일'),
-        make_parameter('gender', '사용자 성별'),
-        make_parameter('disturbanceFactor', '다이어트에 방해가 되는 요소 (0~4)', param_type='int'),
-        make_parameter('favoriteFood', '가장 좋아하는 음식 (0~5)', param_type='int'),
+        make_parameter('phone_num', '핸드폰 번호', _in='url'),
     ],
     'responses': {
         '200': {
-            'description': '설문조사 작성 성공'
+            'description': '요청 성공',
+            'examples': {
+                '': {
+                    "imageUrl": "https://s3.ap-northeast-2.amazonaws.com/useless-project/0/1.mp4",
+                    "videoUrl": "https://baemin.me/IHJ2g5YDW"
+                }
+            }
         },
-        '400': {
-            'description': '설문조사 작성 실패(incorrect formatting)'
+        '403': {
+            'description': '회원가입 되지 않은 전화번호'
         }
     }
 }
