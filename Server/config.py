@@ -13,7 +13,12 @@ class Config:
     }
 
     SWAGGER = {
-        'title': SERVICE_NAME,
+        'title': 'Spoqa Hackathon',
+        "headers": [
+            ('Access-Control-Allow-Origin', '*'),
+            ('Access-Control-Allow-Methods', "GET, POST, PUT, DELETE, OPTIONS"),
+            ('Access-Control-Allow-Credentials', "true"),
+        ],
         'uiversion': 3,
         'specs_route': '/docs',
 
