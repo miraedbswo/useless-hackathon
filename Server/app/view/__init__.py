@@ -4,5 +4,5 @@ from flask_restful import Api
 survey_blueprint = Blueprint('survey', __name__)
 api = Api(survey_blueprint)
 
-from .survey import Survey
+from app.view.survey import Survey
 api.add_resource(Survey)
