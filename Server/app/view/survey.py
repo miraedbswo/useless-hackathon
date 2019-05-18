@@ -1,7 +1,7 @@
 from flasgger import swag_from
 from flask_restful import Resource
 
-from app.doc import SURVEY_POST
+from app.doc.survey import SURVEY_POST
 
 
 class Survey(Resource):
