@@ -1,4 +1,4 @@
-from . import make_parameter
+from app.doc import make_parameter
 
 
 SURVEY_POST = {
